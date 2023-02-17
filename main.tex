@@ -35,8 +35,28 @@
 \section*{Kap 1}
 
 \section*{Kap 8}
-Produkten av alla egenvärden till matris $A$ är $det A$
-
+Produkten av alla egenvärden till matris $A$ är $det A$ \newline
 Summan av alla egenvärden till matris $A$ är $tr A$ vilket betyder att vi tar summan av diagonal elementen.
 
+\begin{equation}
+    p(D) = diag(p(\lambda_1),\ldots,p(\lambda_n))
+\end{equation}
+p är vårt polynom, t.ex om vi har $e^A$ så blir det, $p(x) = e^x$
+\begin{equation}
+    p(A) = Sp(D)S^{-1}
+\end{equation}
+\section*{Kap 9 - Lösa diffekvationer}
+Olika sätt att lösa diff ekvationer av matriser
+\subsection*{ Laplacetransformation}
+
+\subsection*{Diagonalisering genom variabelbyte}
+Om $A$ är en diagonaliserbar matris så har det homogena systemet $\frac{du}{dt} = Au$ den allmänna lösningen
+\begin{equation}
+    u=C_1e^{\lambda_1t}s_1+\ldots+C_n*e^{\lambda_nt}s_n
+\end{equation}
+där $\lambda$ är egenvärden till $A$, $s$ är motsvarande egenvektorer och $C$ är godtyckliga konstanter. 
+\subsection*{Exponentialmatris}
+\begin{equation}
+    e^{tA} = Se^{tD}S^{-1} = S diag(e^{\lambda_1t}, \ldots, e^{\lambda_n * T}) S^{-1}
+\end{equation}
 \end{document}
