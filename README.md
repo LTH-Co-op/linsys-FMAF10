@@ -4,3 +4,4 @@ slippa memorera något i kursen.
 
 # ToDo
 - [ ] Linalg basbyte formler
+- [ ] Adj A
