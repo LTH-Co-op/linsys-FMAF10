@@ -36,16 +36,25 @@
 
 $p_{\Delta}(t) = \frac{1}{\Delta}$ då $0<t<\Delta$ annars 0
 $\int^{\infty}_{-\infty} p_{\Delta}(t) dt = 1$
+\newline
+\newline
 Om $f$ är deriverbar utom i punkterna $a_1, \ldots, a_n$ där den har språng av höjder $b_1,\ldots,b_n$ så är
-$f'(t) = f'_p(t) + b_1\delta(t-a_1)+\ldots+b_n(t-a_n)$
+\begin{equation}
+    f'(t) = f'_p(t) + b_1\delta(t-a_1)+\ldots+b_n(t-a_n)
+\end{equation}
 där $f'_p$ är derivatan som vi kan läsa av från graf med heavside funktion
 
 \section*{Kap 6}
 Faltning: $f \ast g(t) = \int_{-\infty}^{\infty} f(t-\tau)*g(\tau) d\tau$
 
 \section*{Kap 8}
-Produkten av alla egenvärden till matris $A$ är $det A$ \newline
-Summan av alla egenvärden till matris $A$ är $tr A$ vilket betyder att vi tar summan av diagonal elementen.
+\begin{equation}
+    tr A = \lambda_1 + \ldots + \lambda_n    
+\end{equation}
+\begin{equation}
+    det A = \lambda_1 * \ldots *\lambda_n    
+\end{equation}
+
 
 \begin{equation}
     p(D) = diag(p(\lambda_1),\ldots,p(\lambda_n))
@@ -81,6 +90,53 @@ det homogena systemet $\frac{du}{dt}=Au$ har lösningen $u(t)=e^{tA}u(0)$
     \Delta(t)' = \delta(t)
 \end{equation}
 
+Har alla funktioner en Laplace transformation? - Funktioner vars integral av laplace inte konvergerar saknar Laplacetransformation.
+Ensidig laplace = TODO: Finish this
+\newline
+\newline
+% TODO: Härled derivationsregeln för den ensidiga Laplacetransformationen, 6:00 i video 1
+$\delta \ast f(t) = f(t)$
 
+
+\subsubsection*{System}
+\textbf{Vad menas med:} 
+\begin{itemize}
+    \item Linjärt: $S(\alpha w_1 + \beta w_2) = \alpha S w_1 + \beta S w_2$
+    \item Tidsinvariant: Om $S w(t) = y(t)$ så är $S*w(t-a) = y(t-a)$
+    \item Stabilt: Varje begränsad insignal w(t) ger upphov till en begränas utsignal y(t). 
+    \newline
+    Detta kan testas med följande sats: \newline
+    Om ett LTI system $S$ har impulssvaret $h(t)$ så är $S$ stabilt om och endast om integralen $\int_{-\infty}{\infty} |h(t) dt$ konvergerar
+    \item  Kausalt: Om $S w(t) = y(t)$ och $w(t) = 0$ för $t < t_0$ så gäller att $y(t) = 0$ för $ t < t_0$ 
+    \newline
+    Detta kan testas med följande sats: \newline
+    Ett LTI system är kausalt om och endast om impulssvaret $h(t)$ är en kausal funktion. 
+    Det kan också testas med följande sats: \newline
+    Om $H(s) = \frac{Q(s)}{P(s)}$ så är Systemet S stabilt om och endast om $deg Q(s) \leq deg P(s)$ och För varje pol $s_j$ gäller $Re s_j \le 0$.
+\end{itemize}
+
+\textbf{Bra satser:}\newline
+\begin{itemize}
+    \item System kan beskrivas som faltningar med en fix funktion $h(x)$. 
+    \item Impulssvaret är derivatan av stegsvaret: $h(t) = (S\theta(t))'$
+    \item Överföringsfunktionen: $H(s) = \frac{Se^{st}}{e^{st}}$
+    \item Frekvensfunktion $H(t)$ ger oss följande:
+    \item $S sin(w t) = A(w) sin(wt+ \phi(w))$ med amplitudfunktionen $A(w) = |H(iw)|$ och fasfunktionen $\phi(w) = arg(H(iw))$
+    \item För LTI system så är $\mathcal{L} h(t) = H(s)$
+\end{itemize}
+
+\subsubsection*{Matriser}
+Det finns diagonaliserbara matriser med flera av samma egenvärden, t.ex $A = I$ har egenvärden $\lambda_1 = \lambda_2 = 1$ och är diagonal.
+\newline
+\textbf{Satser:}
+\begin{itemize}
+    \item $e^{At} = \Sigma^{\infty}_{k=0} \frac{A^k*t^k}{k!}$
+    \item Ortogonal matris: $A^{-1}=A^T$, $AA^T=A^TA=I$, % TODO: är del två sann?
+    
+\end{itemize}
+
+
+
+% TODO: Förstår inte helt fråga 21
 
 \end{document}
