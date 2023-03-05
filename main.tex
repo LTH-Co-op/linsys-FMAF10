@@ -44,6 +44,10 @@ Om $f$ är deriverbar utom i punkterna $a_1, \ldots, a_n$ där den har språng a
 \end{equation}
 där $f'_p$ är derivatan som vi kan läsa av från graf med heavside funktion
 
+
+\section*{Kap 4 - Inverslaplace}
+
+
 \section*{Kap 6}
 Faltning: $f \ast g(t) = \int_{-\infty}^{\infty} f(t-\tau)*g(\tau) d\tau$
 
@@ -67,6 +71,18 @@ p är vårt polynom, t.ex om vi har $e^A$ så blir det, $p(x) = e^x$
 Olika sätt att lösa diff ekvationer av matriser
 \subsection*{ Laplacetransformation}
 
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{l|l}
+        Poler hos $V(s)$ & Bidrag till $v(t) = \mathcal{L}^{-1} V$ \\
+        \hline
+        Enkel pol i $s=p$ & $Ae^{pt} \theta(t)$ \\
+        Pol av ordning $k$ i $s=p$ & $(A_0* t^0 + \ldots + A_{k-1}*t^{k-1})e^{pt} \theta(t)$ \\
+        Enkla poler i $s=\sigma \pm i \omega$ & $e^{\sigma t)} (A_0* t^0 + \ldots + A_{k-1}*t^{k-1})e^{pt} \theta(t) = Ce^{\sigma t}cos(\sigma t + \alpha)\theta(t)$
+    \end{tabular}
+    \caption{Ansats till invers transform, kan också användas för ansats till homogen lösning i diff ekvationer}
+    \label{tab:my_label}
+\end{table}
 \subsection*{Diagonalisering genom variabelbyte}
 Om $A$ är en diagonaliserbar matris så har det homogena systemet $\frac{du}{dt} = Au$ den allmänna lösningen
 \begin{equation}
