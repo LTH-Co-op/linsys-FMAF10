@@ -82,6 +82,7 @@ Vi kan få fram antal element som är större än $c$, genom att applicera ovan 
 
 - **Kausalt**: Om $S w(t) = y(t)$ och $w(t) = 0$ för $t < t_0$ så gäller att $y(t) = 0$ för $ t < t_0$
   - Ett LTI system är kausalt om och endast om impulssvaret $h(t)$ är en kausal funktion.
+  - Ett exempel på LTI system som är kausalt är $S(w(t)) = w(t)$, asså multiplikation med 1
 
 ## Bra satser
 
