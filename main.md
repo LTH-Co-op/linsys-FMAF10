@@ -63,7 +63,7 @@ Vi kan få fram antal element som är större än $c$, genom att applicera ovan 
 
 - $e^{At} = \Sigma^{\infty}_{k=0} \frac{A^k*t^k}{k!}$
 - Ortogonal matris $A \equiv$ $A$ Inverterbar med $A^{-1}=A^T$, $AA^T=A^TA=I$, # TODO: är del två sann?
-- $tr A = \lambda_1 + \ldots + \lambda_n$
+- $tr A = \lambda_1 + \ldots + \lambda_n$ då A är kvadratisk
 - $det A = \lambda_1 * \ldots *\lambda_n$ # TODO: Improve
 - $p(A) = Sp(D)S^{-1}$
 
