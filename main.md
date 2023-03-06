@@ -1,6 +1,6 @@
 # Kap 1
 
-$p_{\Delta}(t) = \frac{1}{\Delta}$ då $0<t<\Delta$ annars 0
+$p_{\Delta}(t) = \frac{1}{\Delta}$ då $0 \< t \< \Delta$ annars 0
 $\int^{\infty}_{-\infty} p_{\Delta}(t) dt = 1$
 
 Om $f$ är deriverbar utom i punkterna $a_1, \ldots, a_n$ där den har språng av höjder $b_1,\ldots,b_n$ så är
