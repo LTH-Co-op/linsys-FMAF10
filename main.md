@@ -94,7 +94,7 @@ Vi kan få fram antal element som är större än $c$, genom att applicera ovan 
 - För LTI system så är $\mathcal{L} h(t) = H(s)$
 - $S(e^{st}) = H(s)e^{st}$
 
-### Bestämma utsignal om insignal är $cos(t)$ eller $sin(t)$
+### Bestämma utsignal om insignal är $cos(wt)$ eller $sin(wt)$
 
 $$
   S cos(wt) = Re H(iw) * e^{iwt}
