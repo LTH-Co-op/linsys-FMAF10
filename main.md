@@ -75,7 +75,7 @@ Vi kan få fram antal element som är större än $c$, genom att applicera ovan 
 - **Tidsinvariant**: Om $S w(t) = y(t)$ så är $S*w(t-a) =  (t-a)$
 - **Stabilt**: Varje begränsad insignal w(t) ger upphov till en begränas utsignal y(t).
 
-  - Om ett LTI system $S$ har impulssvaret $h(t)$ så är $S$ stabilt om och endast om integralen $\int_{-\infty}^{\infty} |h(t) dt$ konvergerar
+  - Om ett LTI system $S$ har impulssvaret $h(t)$ så är $S$ stabilt om och endast om integralen $\int_{-\infty}^{\infty} |h(t)| dt$ konvergerar
 
   - Om $H(s) = \frac{Q(s)}{P(s)}$ så är Systemet S stabilt om och endast om $deg Q(s) \leq deg P(s)$ och För varje pol $s_j$ gäller $Re s_j \le 0$.
   - Exempel på icke stabilt system är ett system som deriverar, insignal $\cos (t^2)$ stämmer ej
@@ -93,6 +93,16 @@ Vi kan få fram antal element som är större än $c$, genom att applicera ovan 
 - $S sin(w t) = A(w) sin(wt+ \phi(w))$ med amplitudfunktionen $A(w) = |H(iw)|$ och fasfunktionen $\phi(w) = arg(H(iw))$
 - För LTI system så är $\mathcal{L} h(t) = H(s)$
 - $S(e^{st}) = H(s)e^{st}$
+
+### Bestämma utsignal om insignal är $cos(t)$ eller $sin(t)$
+
+$$
+  S cos(wt) = Re H(iw) * e^{iwt}
+$$
+
+$$
+ S sin(wt) = Im H(iw) * e^{iwt}
+$$
 
 # Lösa diff ekvationer
 
