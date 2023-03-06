@@ -19,6 +19,10 @@ där $f'_p$ är derivatan som vi kan läsa av från graf med heavside funktion
 
 > Faltning: $f \ast g(t) = \int_{-\infty}^{\infty} f(t-\tau)*g(\tau) d\tau$
 
+$$
+f \ast \delta^{(n)} = f^{(n)}
+$$
+
 # Matriser
 
 $$
@@ -96,6 +100,8 @@ Vi kan få fram antal element som är större än $c$, genom att applicera ovan 
 
 ### Bestämma utsignal om insignal är $cos(wt)$ eller $sin(wt)$
 
+> Amplitudfunktionen: $A(\omega) = |H(i\omega)|$
+
 $$
   S cos(wt) = Re H(iw) * e^{iwt}
 $$
@@ -133,6 +139,10 @@ $$
 $$
 
 det homogena systemet $\frac{du}{dt}=Au$ har lösningen $u(t)=e^{tA}u(0)$
+
+$$
+e^{At} = S * diag(e^{\lambda_1t}+\ldots+e^{\lambda_k t}) S^{-1}
+$$
 
 # Kontrollfrågor
 
