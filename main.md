@@ -1,8 +1,23 @@
+# Kap 1
+
+$p_{\Delta}(t) = \frac{1}{\Delta}$ då $0<t<\Delta$ annars 0
+$\int^{\infty}_{-\infty} p_{\Delta}(t) dt = 1$
+
+Om $f$ är deriverbar utom i punkterna $a_1, \ldots, a_n$ där den har språng av höjder $b_1,\ldots,b_n$ så är
+
+$$
+f'(t) = f'\_p(t) + b_1\delta(t-a_1)+\ldots+b_n(t-a_n)
+$$
+
+där $f'_p$ är derivatan som vi kan läsa av från graf med heavside funktion
+
 # Laplace
 
 # Inverselaplace
 
 # Faltning
+
+> Faltning: $f \ast g(t) = \int_{-\infty}^{\infty} f(t-\tau)*g(\tau) d\tau$
 
 # Matriser
 
@@ -21,10 +36,36 @@ p är vårt polynom, t.ex om vi har $e^A$ så blir det, $p(x) = e^x$
 
 > $\cos$ och $\sin$ kan skrivas om med eulers formel.
 
+## Vad kan man säga från ett element i $e^{At}$?
+
+- Om t finns i elementet så är den ej diagonaliserbar
+- Om elementet har en term som är konstant så är den ej inverterbar då konstanten är $C*e^{0t}$ så $0$ är ett egenvärde. ($det(A)=0$)
+
+Låt A vara en symmetrisk matris med egenvärden $\lambda_1, \ldots, \lambda_n$, det gäller då att A är:
+
+- Positivt definit - Om alla egenvärden är positiva ($>$)
+- Positivt semidefinit - Om alla egenvärden är icke negativa ($\leq$)
+- Negativt definit - Om alla egenvärden är negativa($<$)
+- Negativt semidefinit - Om alla egenvärden är icke positiva($\geq$)
+- indefinit - Om det finns både positiva och negativa egenvärden
+
+Man kan också också fram fram värden d, genom att strick gauseliminering där våra pivå element är värden vi sätter in i formlen ovan.
+
+## Sylvester sats
+
+I varje diagonalisering är antalet positiva element på diagonalen alltid lika. Detsamma gäller antalet negativa element och element lika med 0.
+
+Vi kan hitta antal positiva och negativa element genom gaus och få fram $d_i$.
+
+Vi kan få fram antal element som är större än $c$, genom att applicera ovan metod på matrisen $A-cI$.
+
 ## Bra satser
 
 - $e^{At} = \Sigma^{\infty}_{k=0} \frac{A^k*t^k}{k!}$
 - Ortogonal matris $A \equiv$ $A$ Inverterbar med $A^{-1}=A^T$, $AA^T=A^TA=I$, # TODO: är del två sann?
+- $tr A = \lambda_1 + \ldots + \lambda_n$
+- $det A = \lambda_1 * \ldots *\lambda_n$ # TODO: Improve
+- $p(A) = Sp(D)S^{-1}$
 
 # System
 
@@ -51,6 +92,38 @@ p är vårt polynom, t.ex om vi har $e^A$ så blir det, $p(x) = e^x$
 - $S sin(w t) = A(w) sin(wt+ \phi(w))$ med amplitudfunktionen $A(w) = |H(iw)|$ och fasfunktionen $\phi(w) = arg(H(iw))$
 - För LTI system så är $\mathcal{L} h(t) = H(s)$
 - $S(e^{st}) = H(s)e^{st}$
+
+# Lösa diff ekvationer
+
+## Laplacetransformation
+
+### Ansats till invers transform
+
+| Poler hos $V(s)$                      | Bidrag till $v(t) = \mathcal{L}^{-1} V$                                                                              |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Enkel pol i $s=p$                     | $Ae^{pt} \theta(t)                                                                                                   |
+| Pol av ordning $k$ i $s=p$            | $(A*0\* t^0 + \ldots + A*{k-1}\*t^{k-1})e^{pt} \theta(t)                                                             |
+| Enkla poler i $s=\sigma \pm i \omega$ | $e^{\sigma t)} (A_0* t^0 + \ldots + A_{k-1}*t^{k-1})e^{pt} \theta(t) = Ce^{\sigma t}cos(\sigma t + \alpha)\theta(t)$ |
+
+## Diagonalisering genom variabelbyte
+
+Om $A$ är en diagonaliserbar matris så har det homogena systemet $\frac{du}{dt} = Au$ den allmänna lösningen
+
+$$
+    u=C_1e^{\lambda_1t}s_1+\ldots+C_n*e^{\lambda_nt}s_n
+$$
+
+där $\lambda$ är egenvärden till $A$, $s$ är motsvarande egenvektorer och $C$ är godtyckliga konstanter.
+
+## Exponentialmatris
+
+$$
+    e^{tA} = Se^{tD}S^{-1} = S diag(e^{\lambda_1t}, \ldots, e^{\lambda_n * T}) S^{-1}
+$$
+
+det homogena systemet $\frac{du}{dt}=Au$ har lösningen $u(t)=e^{tA}u(0)$
+
+# Kontrollfrågor
 
 # Kontrollera efter uppgift
 
