@@ -83,6 +83,8 @@ $$
 
 Där D är en matris med diagonalen av våra pivåelement från Strickt gauss. Och R är vår triangelmatris med $1$ på diagonalen.
 
+Choleskyfaktorisering är $K = LL^T$ där $L = R'^T$ och $R' = D_{1/2}R$ (OBS: Fungerar bara om A är positivt semidefinit)
+
 # System
 
 ## Vad menas med
