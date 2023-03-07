@@ -45,16 +45,6 @@ p är vårt polynom, t.ex om vi har $e^A$ så blir det, $p(x) = e^x$
 - Om t finns i elementet så är den ej diagonaliserbar
 - Om elementet har en term som är konstant så är den ej inverterbar då konstanten är $C*e^{0t}$ så $0$ är ett egenvärde. ($det(A)=0$)
 
-Låt A vara en symmetrisk matris med egenvärden $\lambda_1, \ldots, \lambda_n$, det gäller då att A är:
-
-- Positivt definit - Om alla egenvärden är positiva ($>$)
-- Positivt semidefinit - Om alla egenvärden är icke negativa ($\leq$)
-- Negativt definit - Om alla egenvärden är negativa($<$)
-- Negativt semidefinit - Om alla egenvärden är icke positiva($\geq$)
-- indefinit - Om det finns både positiva och negativa egenvärden
-
-Man kan också också fram fram värden d, genom att strick gauseliminering där våra pivå element är värden vi sätter in i formlen ovan.
-
 ## Sylvester sats
 
 I varje diagonalisering är antalet positiva element på diagonalen alltid lika. Detsamma gäller antalet negativa element och element lika med 0.
@@ -70,6 +60,28 @@ Vi kan få fram antal element som är större än $c$, genom att applicera ovan 
 - $tr A = \lambda_1 + \ldots + \lambda_n$ då A är kvadratisk
 - $det A = \lambda_1 * \ldots *\lambda_n$ # TODO: Improve
 - $p(A) = Sp(D)S^{-1}$
+
+# Kvadratisk form
+
+Låt A vara en symmetrisk matris med egenvärden $\lambda_1, \ldots, \lambda_n$, det gäller då att A är:
+
+- Positivt definit - Om alla egenvärden är positiva ($>$)
+- Positivt semidefinit - Om alla egenvärden är icke negativa ($\leq$)
+- Negativt definit - Om alla egenvärden är negativa($<$)
+- Negativt semidefinit - Om alla egenvärden är icke positiva($\geq$)
+- indefinit - Om det finns både positiva och negativa egenvärden
+
+Man kan också också fram ta värden d, genom att strick gauseliminering där våra pivå element är värden vi sätter in i formlen ovan.
+
+## Choleskyfaktorisering
+
+Man kan använda resultat från Strickt gausselimnering för att diagonalisera en matris. Med följande sats
+
+$$
+K = R^TDR
+$$
+
+Där D är en matris med diagonalen av våra pivåelement från Strickt gauss. Och R är vår triangelmatris med $1$ på diagonalen.
 
 # System
 
