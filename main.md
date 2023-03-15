@@ -43,6 +43,7 @@ p är vårt polynom, t.ex om vi har $e^A$ så blir det, $p(x) = e^x$
 > $\lambda_j$ i karaktetiska polynomet $p_A(\lambda)$. Om $A$ är diagonaliserbar är alltid $k=0$.
 
 > $\cos$ och $\sin$ kan skrivas om med eulers formel.
+<img width="196" alt="image" src="https://user-images.githubusercontent.com/47189713/224545247-72a60f60-f702-4455-97e0-f2d5a66b9580.png">
 
 ## Vad kan man säga från ett element i $e^{At}$?
 
@@ -169,3 +170,8 @@ $$
 - Diff ekvation
   - Testa begynnelse vilkor
   -
+  
+  
+  
+  
+  
