@@ -23,6 +23,10 @@ $$
 f \ast \delta^{(n)} = f^{(n)}
 $$
 
+$$
+f \ast \theta(t) = \int_{-\infty}^{t}f(\tau) d\tau
+$$
+
 # Matriser
 
 $$
